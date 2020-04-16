@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Styles2.css">
+
+	<script src="Overlap-slow.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+	
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase.js"></script>
+	
+	
+</head>
+<body>
+<center>
+<div id="video-container">
+	<video id="videotest" autoplay muted>
+		<source src="videos/Group2_Slow-video_short/12.mp4">
+	</video>
+	<div id="video-message"></div>
+	<div id="controles">
+		<button id="button-left" type="button" onclick="shift(-2)"><</button>
+		<button id="validate" type ="button" onclick="validate()">VALIDATE</button>
+		<button id="button-right" type="button" onclick="shift(2)">></button>
+	</div>
+</div>
+</center>
+</body>
+</html>

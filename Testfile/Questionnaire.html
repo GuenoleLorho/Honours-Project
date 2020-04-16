@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Styles.css">
+
+	<script src="Questionnaire.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+	
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase.js"></script>
+	
+	
+</head>
+<body>
+<center>
+<div id="header" style="width:800px; font:16px/26px Verdana; line-height: 1.6;">
+	<h2 style="padding: 0px 30px 0px 30px;">Section 3/3</h2>
+	<h3>Questionnaire<h3>
+</div>
+<section style="width:800px;border:1px solid #ccc;">
+	<div><h3 style="font-weight: normal;">Answer all the questions in the order they are presented.</h3><h3><span id="star">*required</span></h3></div>
+	
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I am:<span id="star">*</span></h3></div>
+	<div id="radioButtons" style="text-align: left; padding-left: 20%;">
+		<p><input type="radio" id="myRadio" name="question1" value="male"><label for="male">Male</label></p>
+		<p><input type="radio" id="myRadio" name="question1" value="female"><label for="male">Female</label></p>
+		<p><input type="radio" id="myRadio" name="question1" value="other"><label for="male">Other</label></p>
+	</div>
+	<p id="error1" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>Age range:<span id="star">*</span></h3></div>
+		<div id="radioButtons" style="text-align: left; padding-left: 20%;">
+		<p><input type="radio" id="myRadio" name="question2" value="0"><label for="male">0 - 17 years old</label></p>
+		<p><input type="radio" id="myRadio" name="question2" value="1"><label for="male">18 - 25 years old</label></p>
+		<p><input type="radio" id="myRadio" name="question2" value="2"><label for="male">26 - 40 years old</label></p>
+		<p><input type="radio" id="myRadio" name="question2" value="3"><label for="male">41 - 65 years old</label></p>
+		<p><input type="radio" id="myRadio" name="question2" value="4"><label for="male">65+ years old</label></p>
+	</div>
+	<p id="error2" class="errors"></p>
+</section>
+
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I have no visual impairments.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question3" value="0">
+		<input type="radio" id="myRadio" name="question3" value="1">
+		<input type="radio" id="myRadio" name="question3" value="2">
+		<input type="radio" id="myRadio" name="question3" value="3">
+		<input type="radio" id="myRadio" name="question3" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error3" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I have an interest in films and Cinema.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question4" value="0">
+		<input type="radio" id="myRadio" name="question4" value="1">
+		<input type="radio" id="myRadio" name="question4" value="2">
+		<input type="radio" id="myRadio" name="question4" value="3">
+		<input type="radio" id="myRadio" name="question4" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error4" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I often notice “bad” edits in film.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question5" value="0">
+		<input type="radio" id="myRadio" name="question5" value="1">
+		<input type="radio" id="myRadio" name="question5" value="2">
+		<input type="radio" id="myRadio" name="question5" value="3">
+		<input type="radio" id="myRadio" name="question5" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error5" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I often take notice of the editing while watching a film.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question6" value="0">
+		<input type="radio" id="myRadio" name="question6" value="1">
+		<input type="radio" id="myRadio" name="question6" value="2">
+		<input type="radio" id="myRadio" name="question6" value="3">
+		<input type="radio" id="myRadio" name="question6" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error6" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I am familiar with the craft of editing.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question7" value="0">
+		<input type="radio" id="myRadio" name="question7" value="1">
+		<input type="radio" id="myRadio" name="question7" value="2">
+		<input type="radio" id="myRadio" name="question7" value="3">
+		<input type="radio" id="myRadio" name="question7" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error7" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I am able to define what a “Match-Action-Cut” is.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question8" value="0">
+		<input type="radio" id="myRadio" name="question8" value="1">
+		<input type="radio" id="myRadio" name="question8" value="2">
+		<input type="radio" id="myRadio" name="question8" value="3">
+		<input type="radio" id="myRadio" name="question8" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error8" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I am knowledgeable about movies.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question9" value="0">
+		<input type="radio" id="myRadio" name="question9" value="1">
+		<input type="radio" id="myRadio" name="question9" value="2">
+		<input type="radio" id="myRadio" name="question9" value="3">
+		<input type="radio" id="myRadio" name="question9" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error9" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I often go and see films at the cinema.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question10" value="0">
+		<input type="radio" id="myRadio" name="question10" value="1">
+		<input type="radio" id="myRadio" name="question10" value="2">
+		<input type="radio" id="myRadio" name="question10" value="3">
+		<input type="radio" id="myRadio" name="question10" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error10" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I often watch movies at home.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question11" value="0">
+		<input type="radio" id="myRadio" name="question11" value="1">
+		<input type="radio" id="myRadio" name="question11" value="2">
+		<input type="radio" id="myRadio" name="question11" value="3">
+		<input type="radio" id="myRadio" name="question11" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error11" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I often watch online video content (e.g. Youtube).<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question12" value="0">
+		<input type="radio" id="myRadio" name="question12" value="1">
+		<input type="radio" id="myRadio" name="question12" value="2">
+		<input type="radio" id="myRadio" name="question12" value="3">
+		<input type="radio" id="myRadio" name="question12" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error12" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I found the short well edited.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question13" value="0">
+		<input type="radio" id="myRadio" name="question13" value="1">
+		<input type="radio" id="myRadio" name="question13" value="2">
+		<input type="radio" id="myRadio" name="question13" value="3">
+		<input type="radio" id="myRadio" name="question13" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error13" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I thought the short was well animated.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question14" value="0">
+		<input type="radio" id="myRadio" name="question14" value="1">
+		<input type="radio" id="myRadio" name="question14" value="2">
+		<input type="radio" id="myRadio" name="question14" value="3">
+		<input type="radio" id="myRadio" name="question14" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error14" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I thought the sound design of the short was good.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question15" value="0">
+		<input type="radio" id="myRadio" name="question15" value="1">
+		<input type="radio" id="myRadio" name="question15" value="2">
+		<input type="radio" id="myRadio" name="question15" value="3">
+		<input type="radio" id="myRadio" name="question15" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error15" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I understood the subject of the experiment.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question16" value="0">
+		<input type="radio" id="myRadio" name="question16" value="1">
+		<input type="radio" id="myRadio" name="question16" value="2">
+		<input type="radio" id="myRadio" name="question16" value="3">
+		<input type="radio" id="myRadio" name="question16" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error16" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I found the subject of the experiment interesting.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question17" value="0">
+		<input type="radio" id="myRadio" name="question17" value="1">
+		<input type="radio" id="myRadio" name="question17" value="2">
+		<input type="radio" id="myRadio" name="question17" value="3">
+		<input type="radio" id="myRadio" name="question17" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error17" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I know what constitutes “good” editing.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question18" value="0">
+		<input type="radio" id="myRadio" name="question18" value="1">
+		<input type="radio" id="myRadio" name="question18" value="2">
+		<input type="radio" id="myRadio" name="question18" value="3">
+		<input type="radio" id="myRadio" name="question18" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error18" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I am familiar with the phenomenon of edit blindness.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question19" value="0">
+		<input type="radio" id="myRadio" name="question19" value="1">
+		<input type="radio" id="myRadio" name="question19" value="2">
+		<input type="radio" id="myRadio" name="question19" value="3">
+		<input type="radio" id="myRadio" name="question19" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error19" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>In my opinion, the editing of a film should be “invisible”.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question20" value="0">
+		<input type="radio" id="myRadio" name="question20" value="1">
+		<input type="radio" id="myRadio" name="question20" value="2">
+		<input type="radio" id="myRadio" name="question20" value="3">
+		<input type="radio" id="myRadio" name="question20" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error20" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I think I have experienced edit blindness (i.e. not noticing an edit) during the viewing of the short.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question21" value="0">
+		<input type="radio" id="myRadio" name="question21" value="1">
+		<input type="radio" id="myRadio" name="question21" value="2">
+		<input type="radio" id="myRadio" name="question21" value="3">
+		<input type="radio" id="myRadio" name="question21" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error21" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I am familiar with the 180-degree rule in cinema.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question22" value="0">
+		<input type="radio" id="myRadio" name="question22" value="1">
+		<input type="radio" id="myRadio" name="question22" value="2">
+		<input type="radio" id="myRadio" name="question22" value="3">
+		<input type="radio" id="myRadio" name="question22" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error22" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I am familiar with the 30-degree rule in film.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question23" value="0">
+		<input type="radio" id="myRadio" name="question23" value="1">
+		<input type="radio" id="myRadio" name="question23" value="2">
+		<input type="radio" id="myRadio" name="question23" value="3">
+		<input type="radio" id="myRadio" name="question23" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error23" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I know what film continuity is.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question24" value="0">
+		<input type="radio" id="myRadio" name="question24" value="1">
+		<input type="radio" id="myRadio" name="question24" value="2">
+		<input type="radio" id="myRadio" name="question24" value="3">
+		<input type="radio" id="myRadio" name="question24" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error24" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I am able to explain what a Dutch angle is.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question25" value="0">
+		<input type="radio" id="myRadio" name="question25" value="1">
+		<input type="radio" id="myRadio" name="question25" value="2">
+		<input type="radio" id="myRadio" name="question25" value="3">
+		<input type="radio" id="myRadio" name="question25" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error25" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I know what a “Gaffer” in filmmaking is.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question26" value="0">
+		<input type="radio" id="myRadio" name="question26" value="1">
+		<input type="radio" id="myRadio" name="question26" value="2">
+		<input type="radio" id="myRadio" name="question26" value="3">
+		<input type="radio" id="myRadio" name="question26" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error26" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I enjoyed the short.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question27" value="0">
+		<input type="radio" id="myRadio" name="question27" value="1">
+		<input type="radio" id="myRadio" name="question27" value="2">
+		<input type="radio" id="myRadio" name="question27" value="3">
+		<input type="radio" id="myRadio" name="question27" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error27" class="errors"></p>
+</section>
+
+<section id="form" style="width:800px;border:1px solid #ccc;">
+	<div><h3>I enjoyed participating in this study.<span id="star">*</span></h3></div>
+	<div id="radioButtons">
+		<p>Definitely disagree
+		<input type="radio" id="myRadio" name="question28" value="0">
+		<input type="radio" id="myRadio" name="question28" value="1">
+		<input type="radio" id="myRadio" name="question28" value="2">
+		<input type="radio" id="myRadio" name="question28" value="3">
+		<input type="radio" id="myRadio" name="question28" value="4">
+		Definitely agree</p>
+	</div>
+	<p id="error28" class="errors"></p>
+</section>
+
+
+
+
+
+<section id="submit">
+<div id="error_message" class="errors"></div>
+<button id="btn" onclick="submit()" type="next">Submit</button>
+</section>
+</center>
+</body>
+</html>

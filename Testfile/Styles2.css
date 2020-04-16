@@ -1,0 +1,70 @@
+#videotest {
+ /* pointer-events: none;*/
+  padding: 5px;
+  margin: 5px, blue;
+  width: 80%;
+  height: auto;
+}
+
+#video-container {
+   position: absolute;
+   z-index: -1;
+   width: 100%;
+   padding: 0px;
+}
+
+#video-message {
+	pointer-events: none;
+    position: absolute;
+    z-index: 0;
+	/*color: white;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	width: 80%;*/
+	width: 10%;
+	top: 35%;
+	left: 45%;
+	margin: auto;
+}
+#video-text {
+	pointer-events: none;
+    position: absolute;
+    z-index: 0;
+	color: white;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	width: 68%;
+	top: 30%;
+	left: 16%;
+	margin: auto;
+	text-align: left;
+	
+}
+body{
+	background-color: #f2f2f2;
+
+}
+button{
+	position: relative;
+	/*background-color: blue;*/
+	display: inline-block;
+	font-size: 50px;
+	margin: auto;
+}
+
+#controles{
+	display: inline-block;
+	width: 100%;
+	padding: auto;
+}
+#validate{
+	margin-left: 25%;
+	margin-right: 25%;
+}h1, h2{
+	font-family: Verdana;
+}
+h2{
+	text-align: center;
+}
+center{
+	background-color: yellow;
+	margin: 0px;
+}

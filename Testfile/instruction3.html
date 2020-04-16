@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="Styles2.css">
+	
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-analytics.js"></script>
+	
+	<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase.js"></script>
+	
+	
+</head>
+<body>
+<center>
+<div id="video-container">
+	<video id="videotest">
+		<source src="videos/ControleTime.mp4">
+	</video>
+	<div id="video-text">
+		<h1>Controls:</h1>
+		<h1 id="list">You can click on the "<" ">" Arrows (bottom left and right) to lengthen or shorten the edit.</h1>
+		<h1 id="list">Click on the current clip to play it again.</h1>
+		<h1 id="list">Select the VALIDATE button once you've made your choice.</h1><br>
+		<h2>[Press the validate button to continue]<h2>
+	</div>
+		<div id="controles">
+		<button id="button-left" type="button" onclick=""><</button>
+		<button id="validate" type ="button" onclick="window.location.href = 'OverlapTest-fast.html'">VALIDATE</button>
+		<button id="button-right" type="button" onclick="">></button>
+	</div>
+</div>
+
+
+</center>
+
+
+</body>
+</html>
