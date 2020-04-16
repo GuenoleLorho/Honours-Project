@@ -112,7 +112,7 @@ function nextStep(){
 			if (step == 1){
 				//save data and proceed to next page
 				sessionStorage.setItem("animationTest", timeData);
-				window.location = "Instruction2.html";
+				window.location = "instruction2.html";
 				console.log("yaya next exercice");
 			}
 			var vidString;
