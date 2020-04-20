@@ -12,9 +12,16 @@ window.onload = function firebaseSetUp() {
 	  // Initialize Firebase
 	  firebase.initializeApp(firebaseConfig);
 	  firebase.analytics();
+	  
+	  readTextArea();
 }
-
+function readTextArea(){
+	var text = document.getElementById("comments");
+	console.log("text = " + text.value);
+	sessionStorage.setItem('comments', text.value);
+}
 function submit(){
+	readTextArea();
 	//var questionNo = document.getElementById("form").count;
 	var answerNo = 0;
 	var questionNo = document.querySelectorAll('#form').length;
@@ -25,14 +32,14 @@ function submit(){
 		if(checkVal != null){
 			checkVal = checkVal.value;
 			var questionString = ""+"Question" +i;
-			console.log("questionString = "+ questionString);
+			//console.log("questionString = "+ questionString);
 			sessionStorage.setItem(questionString, checkVal);
-			console.log(i + "da value is " + checkVal);
+			//console.log(i + "da value is " + checkVal);
 			document.getElementById(errorId).innerHTML = "";
 			document.getElementById('error_message').innerHTML = "";
 			answerNo +=1;
 		}else{
-			console.log("i = " + i)
+			//console.log("i = " + i)
 			document.getElementById(errorId).innerHTML = "*Please select one of the values";
 			
 		}
@@ -81,7 +88,5 @@ function sendData (questionNo){
 		//data += {questionnaire};
 		ref.push(data);
 		console.log("DATA  PUUUUSHHHHED");
-		
-		
-		
 }
+

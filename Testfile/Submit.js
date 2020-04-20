@@ -16,17 +16,21 @@ window.onload = function sendData() {
 	  firebase.analytics();
 
 		var database = firebase.database();
-		var ref = database.ref('Survey');	
+		var ref = database.ref('Survey-v2');	
 		var questionnaire = {};
 		var questionNo = sessionStorage["questionNo"];
 		console.log("questionNo = " + questionNo);
 		for(i = 0; i < (questionNo); i++) {
 			var x = i + 1;
-			console.log("x = "+ x);
+			//console.log("x = "+ x);
 			var questionString = ""+"Question" +x;
 			console.log(questionString +" and " + i);
 			questionnaire[questionString] = sessionStorage[questionString];
 		}
+		x +=1;
+		questionString = ""+"Question" +x;
+		questionnaire[questionString] = sessionStorage["comments"];
+		console.log("questionnaire = " + questionnaire);
 		
 		var data = {
 			groupNo: sessionStorage["groupNo"],
@@ -35,7 +39,7 @@ window.onload = function sendData() {
 			cutDetectionTime: sessionStorage["animationTest"],
 			smoothCutFast: sessionStorage["fast-cut"],
 			smoothCutSlow: sessionStorage["slow-cut"],
-			questionnaire: questionnaire
+			questionnaire: questionnaire			
 		}
 		ref.push(data);
 		dataCheck = true;

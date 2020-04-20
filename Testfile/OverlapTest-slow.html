@@ -19,9 +19,21 @@
 	</video>
 	<div id="video-message"></div>
 	<div id="controles">
-		<button id="button-left" type="button" onclick="shift(-2)"><</button>
-		<button id="validate" type ="button" onclick="validate()">VALIDATE</button>
-		<button id="button-right" type="button" onclick="shift(2)">></button>
+		<button id="button-left" type="button" onclick="shift(-2)">-4 frames</button>
+		
+		<input onclick="timeline(00)" type="radio" id="00" name="timeline" value="00">
+		<input onclick="timeline(02)" type="radio" id="02" name="timeline" value="02">
+		<input onclick="timeline(04)" type="radio" id="04" name="timeline" value="04">
+		<input onclick="timeline(06)" type="radio" id="06" name="timeline" value="06">
+		<input onclick="timeline(08)" type="radio" id="08" name="timeline" value="08">
+		<input onclick="timeline(10)" type="radio" id="10" name="timeline" value="10">
+		<input onclick="timeline(12)" type="radio" id="12" name="timeline" value="12">
+		<input onclick="timeline(14)" type="radio" id="14" name="timeline" value="14">
+		<input onclick="timeline(16)" type="radio" id="16" name="timeline" value="16">
+		<input onclick="timeline(18)" type="radio" id="18" name="timeline" value="18">
+				
+		<button id="button-right" type="button" onclick="shift(2)">+4 frames</button>
+		<button id="validate" type ="button" onclick="validate()">Confirm edit</button>
 	</div>
 </div>
 </center>
