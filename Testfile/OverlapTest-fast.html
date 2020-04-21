@@ -14,32 +14,24 @@
 <body>
 <center>
 <div id="video-container">
-	<video id="videotest" autoplay muted>
-		<source src="videos/Group1_fast-video_short/07.mp4">
+<div onclick="play()">
+	<video id="playedVideo" autoplay muted>
+		<source src='videos/Overlap/fast_precut.mp4'>
 	</video>
+	<video id="BC_load" autoplay muted>
+		<source src='videos/Overlap/fast_postcut.mp4'>
+	</video>
+	</div>
 	<div id="video-message"></div>
 	<div id="controles">
-		<button id="button-left" type="button" onclick="shift(-1)">-1 frame</button>
-		
-		<input onclick="timeline(00)" type="radio" id="00" name="timeline" value="00">
-		<input onclick="timeline(01)" type="radio" id="01" name="timeline" value="01">
-		<input onclick="timeline(02)" type="radio" id="02" name="timeline" value="02">
-		<input onclick="timeline(03)" type="radio" id="03" name="timeline" value="03">
-		<input onclick="timeline(04)" type="radio" id="04" name="timeline" value="04">
-		<input onclick="timeline(05)" type="radio" id="05" name="timeline" value="05">
-		<input onclick="timeline(06)" type="radio" id="06" name="timeline" value="06">
-		<input onclick="timeline(07)" type="radio" id="07" name="timeline" value="07">
-		<input onclick="timeline(08)" type="radio" id="08" name="timeline" value="08">
-		<input onclick="timeline(09)" type="radio" id="09" name="timeline" value="09">
-		<input onclick="timeline(10)" type="radio" id="10" name="timeline" value="10">
-		<input onclick="timeline(11)" type="radio" id="11" name="timeline" value="11">
-		<input onclick="timeline(12)" type="radio" id="12" name="timeline" value="12">
-		<input onclick="timeline(13)" type="radio" id="13" name="timeline" value="13">
-		<input onclick="timeline(14)" type="radio" id="14" name="timeline" value="14">
-		<input onclick="timeline(15)" type="radio" id="15" name="timeline" value="15">
-				
-		<button id="button-right" type="button" onclick="shift(1)">+1 frame</button>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<div class="slidecontainer">
+		<h4>Shorter edit<input type="range" min="0" max="15" value="8" class="slider" id="myRange">Longer edit</h4>
+		</div>
 		<button id="validate" type ="button" onclick="validate()">Confirm edit</button>
+	</div>
+	<div id="controles">
+		
 	</div>
 </div>
 

@@ -14,26 +14,24 @@
 <body>
 <center>
 <div id="video-container">
-	<video id="videotest" autoplay muted>
-		<source src="videos/Group2_Slow-video_short/12.mp4">
+<div onclick="play()">
+	<video id="playedVideo" autoplay muted>
+		<source src='videos/Overlap/fast_precut.mp4'>
 	</video>
+	<video id="BC_load" autoplay muted>
+		<source src='videos/Overlap/fast_postcut.mp4'>
+	</video>
+	</div>
 	<div id="video-message"></div>
 	<div id="controles">
-		<button id="button-left" type="button" onclick="shift(-2)">-4 frames</button>
-		
-		<input onclick="timeline(00)" type="radio" id="00" name="timeline" value="00">
-		<input onclick="timeline(02)" type="radio" id="02" name="timeline" value="02">
-		<input onclick="timeline(04)" type="radio" id="04" name="timeline" value="04">
-		<input onclick="timeline(06)" type="radio" id="06" name="timeline" value="06">
-		<input onclick="timeline(08)" type="radio" id="08" name="timeline" value="08">
-		<input onclick="timeline(10)" type="radio" id="10" name="timeline" value="10">
-		<input onclick="timeline(12)" type="radio" id="12" name="timeline" value="12">
-		<input onclick="timeline(14)" type="radio" id="14" name="timeline" value="14">
-		<input onclick="timeline(16)" type="radio" id="16" name="timeline" value="16">
-		<input onclick="timeline(18)" type="radio" id="18" name="timeline" value="18">
-				
-		<button id="button-right" type="button" onclick="shift(2)">+4 frames</button>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<div class="slidecontainer">
+		<h4>Shorter edit<input type="range" min="0" max="18" value="10" class="slider" id="myRange">Longer edit</h4>
+		</div>
 		<button id="validate" type ="button" onclick="validate()">Confirm edit</button>
+	</div>
+	<div id="controles">
+		
 	</div>
 </div>
 </center>
