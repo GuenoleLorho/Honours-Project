@@ -16,9 +16,23 @@ function slider(){
 	var slider = document.getElementById("myRange");
 	slider.oninput = function() {
 		cutId = this.value;
-		if(cutId < 10){
+
+		if(this.value == 15){
+			cutId = 16;
+		}
+		if(this.value ==16){
+			cutId = 18
+		}
+		if(this.value == 3){
+			cutId = 2
+		}
+		if(this.value == 2){
+			cutId = 0
+		}
+				if(cutId < 10){
 			cutId = ""+ 0 + cutId;
 		}
+		console.log("saved frame = " + cutId);
 	play();
 	}
 }
