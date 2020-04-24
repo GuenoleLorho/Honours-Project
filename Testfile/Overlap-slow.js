@@ -59,15 +59,15 @@ function validate(){
 	sessionStorage.setItem("slow-cut", cutId);
 	window.location = "Questionnaire.html";
 }
-/*
+
 function loadVid(){
 	for(i=0; i<10; i++){
 		var x = i*2;
 		if(x < 10){
 			x = ""+ 0 + x;
 		}
-		var video = document.getElementById("BC_load");
+		var video = document.getElementById("BC");
 		video.src = 'videos/Group2_Slow-video_short/'+x+'.mp4'
 		video.load();
 	}
-}*/
+}
