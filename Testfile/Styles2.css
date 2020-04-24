@@ -26,7 +26,23 @@
    width: 100%;
    padding: 0px;
 }
-
+#sequenceCount {
+	pointer-events: none;
+    position: absolute;
+    z-index: 1;
+	/*color: white;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	width: 80%;*/
+	width: 10%;
+	top: 10px;
+	/*top: 80%;*/
+	left: 80%;
+	margin: auto;
+	font-family: verdana;
+	font-size: 25px;
+	color: white;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000;
+}
 #video-message {
 	pointer-events: none;
     position: absolute;
@@ -35,7 +51,8 @@
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	width: 80%;*/
 	width: 10%;
-	top: 35%;
+	/*top: 35%;*/
+	/*top: 80%;*/
 	left: 45%;
 	margin: auto;
 }

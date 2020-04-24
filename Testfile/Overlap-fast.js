@@ -1,5 +1,5 @@
 var cutId ="" + 0 + 8;
-
+var counter = 9;
 
 window.addEventListener("load", setUp, false);
 
@@ -16,6 +16,8 @@ function slider(){
 	var slider = document.getElementById("myRange");
 	slider.oninput = function() {
 		cutId = this.value;
+		var x = this.value;
+		counter = +x + +1 ;
 		if(cutId < 10){
 			cutId = ""+ 0 + cutId;
 		}
@@ -25,13 +27,18 @@ function slider(){
 
 function play(){
 	document.getElementById("video-message").innerHTML = "";
+	var count = document.getElementById("sequenceCount");
+	count.innerHTML = "Clip no "+ counter+"";
+	count.style.marginTop = "5px";
 	var video = document.getElementById("playedVideo");
 	video.src = 'videos/Group1_fast-video_short/'+cutId+'.mp4'
 	video.currentTime = 0;
 }
 
 function replay(){
-	document.getElementById("video-message").innerHTML = "<img src='replay2.svg'>";
+	var message = document.getElementById("video-message");
+	message.style.top = "35%";
+	message.innerHTML = "<img src='replay2.svg'>";
 }
 
 function validate(){

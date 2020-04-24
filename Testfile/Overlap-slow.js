@@ -1,5 +1,5 @@
 var cutId = 10;
-
+var counter =9;
 
 window.addEventListener("load", setUp, false);
 
@@ -16,7 +16,7 @@ function slider(){
 	var slider = document.getElementById("myRange");
 	slider.oninput = function() {
 		cutId = this.value;
-
+		counter = this.value - 1;
 		if(this.value == 15){
 			cutId = 16;
 		}
@@ -38,14 +38,19 @@ function slider(){
 }
 
 function play(){
+	var count = document.getElementById("sequenceCount");
 	document.getElementById("video-message").innerHTML = "";
+	count.innerHTML = "Clip no "+ counter+"";
+	count.style.marginTop = "5px";
 	var video = document.getElementById("playedVideo");
 	video.src = 'videos/Group2_Slow-video_short/'+cutId+'.mp4'
 	video.currentTime = 0;
 }
 
 function replay(){
-	document.getElementById("video-message").innerHTML = "<img src='replay2.svg'>";
+	var message = document.getElementById("video-message");
+	message.style.top = "35%";
+	message.innerHTML = "<img src='replay2.svg'>";
 }
 
 function validate(){

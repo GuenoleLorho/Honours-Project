@@ -16,7 +16,7 @@ window.onload = function sendData() {
 	  firebase.analytics();
 
 		var database = firebase.database();
-		var ref = database.ref('Survey-v2');	
+		var ref = database.ref('Survey-v3');	
 		var questionnaire = {};
 		var questionNo = sessionStorage["questionNo"];
 		console.log("questionNo = " + questionNo);
