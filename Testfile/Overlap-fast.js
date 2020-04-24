@@ -46,7 +46,7 @@ function validate(){
 	sessionStorage.setItem("fast-cut", cutId);
 	window.location = "OverlapTest-slow.html";
 }
-
+/*
 function loadVid(){
 	for(i=0; i<16; i++){
 		var x = i;
@@ -57,4 +57,4 @@ function loadVid(){
 		video.src = 'videos/Group1_fast-video_short/'+x+'.mp4'
 		video.load();
 	}
-}
+}*/

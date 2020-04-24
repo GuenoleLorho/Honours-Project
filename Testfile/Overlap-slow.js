@@ -38,8 +38,8 @@ function slider(){
 }
 
 function play(){
-	var count = document.getElementById("sequenceCount");
 	document.getElementById("video-message").innerHTML = "";
+	var count = document.getElementById("sequenceCount");
 	count.innerHTML = "Clip no "+ counter+"";
 	count.style.marginTop = "5px";
 	var video = document.getElementById("playedVideo");
@@ -58,7 +58,7 @@ function validate(){
 	sessionStorage.setItem("slow-cut", cutId);
 	window.location = "Questionnaire.html";
 }
-
+/*
 function loadVid(){
 	for(i=0; i<10; i++){
 		var x = i*2;
@@ -69,4 +69,4 @@ function loadVid(){
 		video.src = 'videos/Group2_Slow-video_short/'+x+'.mp4'
 		video.load();
 	}
-}
+}*/
