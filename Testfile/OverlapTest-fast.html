@@ -14,16 +14,24 @@
 <body>
 <center>
 <div id="video-container">
-<div onclick="play()">
-	<video id="playedVideo" autoplay muted>
+	<video onclick="playVid()" id="playedVideo" autoplay muted>
 		<source src=''>
 	</video>
-	<video id="BC_load" autoplay muted>
-		<source src=''>
-	</video>
-	</div>
+	
+	
+	<div id="display1">
 	<div id="sequenceCount"></div>
+	</div>
+	<div id="display2">
 	<div id="video-message"></div>
+	</div>
+	<video id="BC" muted>
+		<source src='videos/Group2_Slow-video_short/00.mp4'>
+	</video>
+	
+
+
+</div>
 	<div id="controles">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<div class="slidecontainer">
@@ -31,10 +39,6 @@
 		</div>
 		<button id="validate" type ="button" onclick="validate()">Confirm edit</button>
 	</div>
-	<div id="controles">
-		
-	</div>
-</div>
 
 </center>
 </body>

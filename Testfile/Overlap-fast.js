@@ -9,7 +9,7 @@ function setUp(){
 	
 	
 	//loadVid();
-	play();
+	playVid();
 	slider();
 }
 function slider(){
@@ -21,11 +21,11 @@ function slider(){
 		if(cutId < 10){
 			cutId = ""+ 0 + cutId;
 		}
-	play();
+	playVid();
 	}
 }
 
-function play(){
+function playVid(){
 	document.getElementById("video-message").innerHTML = "";
 	var count = document.getElementById("sequenceCount");
 	count.innerHTML = "Clip no "+ counter+"";
