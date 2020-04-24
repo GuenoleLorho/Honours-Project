@@ -8,7 +8,7 @@ function setUp(){
 	video.addEventListener("ended", replay);
 	
 	
-	loadVid();
+	//loadVid();
 	play();
 	slider();
 }
