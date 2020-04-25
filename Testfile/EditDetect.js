@@ -98,6 +98,7 @@ function getNowTime(){
 
 
 function nextStep(){
+	getNowTime();
 	if(clickNo < 2){
 			console.log("please click somewhere at least once..");
 			if(step = 0){
