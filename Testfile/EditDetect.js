@@ -22,7 +22,7 @@ var difference;
 var startTime;
 
 var step = 0;
-var group;
+var group = 1;
 var timeData = [];
 var clickNo = 0;
 var persnoNo = 0;
@@ -40,12 +40,12 @@ window.addEventListener("load", setUp, false);
 
 function setUp(){
 	//assign group randomly
-	var random = Math.floor(Math.random() * 10);
+	/*var random = Math.floor(Math.random() * 10);
 	if(random > 4){
 		group = 1
 	}else{
 		group = 2;
-	}
+	}*/
 	sessionStorage.setItem('groupNo', group);
 	console.log("da group is " + group);
 	
