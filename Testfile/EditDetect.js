@@ -27,6 +27,9 @@ var timeData = [];
 var clickNo = 0;
 var persnoNo = 0;
 
+var vidTime;
+var vidTimeData = [];
+
 window.onload = function centerText() {
     var video = document.getElementById('video-container');
     var customMessage = document.getElementById('video-message');
@@ -51,6 +54,8 @@ function setUp(){
 	
 	//check for key press
 	var video = document.getElementById('videotest');
+	vidTime = video.currentTime;
+	console.log("vid time = " + vidTime);
 	//var timer = setInterval(update, 100);
 	document.onkeypress = function(e) {
 		var clickFB = document.getElementById('videotest');
@@ -83,6 +88,10 @@ function startTimer(){
 }
 
 function getNowTime(){
+	var video = document.getElementById('videotest');
+	vidTime = video.currentTime;
+	vidTimeData.push(vidTime);
+	
 	updatedTime = new Date().getTime();
 	if(savedTime){
 		difference = (updatedTime - startTime) + savedTime;
@@ -99,7 +108,8 @@ function getNowTime(){
 
 function nextStep(){
 	getNowTime();
-	if(clickNo < 2){
+	console.log("SAVE DATA = " + vidTimeData);
+	if(clickNo < 3){
 			console.log("please click somewhere at least once..");
 			if(step = 0){
 				document.getElementById("video-message").innerHTML = "<h2>Please do the exercice</h2><br><h1>Press the SPACE BAR as soon as the screen becomes WHITE</H1><br><h2>[Press the space bar to begin]</h2>";
@@ -108,11 +118,13 @@ function nextStep(){
 			}
 			
 			timeData= [];
+			vidTimeData = [];
 			clickNo = 0;
 		}else{
 			if (step == 1){
 				//save data and proceed to next page
 				sessionStorage.setItem("animationTest", timeData);
+				sessionStorage.setItem('animationTestV2', vidTimeData);
 				window.location = "instruction2.html";
 				console.log("yaya next exercice");
 			}
@@ -146,6 +158,7 @@ function nextStep(){
 				clickNo = 0;
 				console.log("timeData before storage = "+ timeData);
 				sessionStorage.setItem('controlTest', timeData);
+				sessionStorage.setItem('controlTestV2', vidTimeData);
 				console.log("save1 = " + sessionStorage['controlTest']);
 				step +=1;
 			}

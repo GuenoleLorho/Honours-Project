@@ -16,7 +16,7 @@ window.onload = function sendData() {
 	  firebase.analytics();
 
 		var database = firebase.database();
-		var ref = database.ref('Survey-v3');	
+		var ref = database.ref('Survey-v4');	
 		var questionnaire = {};
 		var questionNo = sessionStorage["questionNo"];
 		console.log("questionNo = " + questionNo);
@@ -37,6 +37,8 @@ window.onload = function sendData() {
 			vidId: sessionStorage["vidId"],
 			controleTime: sessionStorage["controlTest"],
 			cutDetectionTime: sessionStorage["animationTest"],
+			controleTimeV2: sessionStorage["controlTestV2"],
+			cutDetectionTimeV2: sessionStorage["animationTestV2"],
 			smoothCutFast: sessionStorage["fast-cut"],
 			smoothCutSlow: sessionStorage["slow-cut"],
 			questionnaire: questionnaire			
